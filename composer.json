@@ -10,6 +10,9 @@
     "require": {
         "illuminate/support": "~5.1"
     },
+    "suggest": {
+        "ext-amqp": ""
+    },
     "autoload": {
         "psr-4": {
             "Wuwx\\LaravelPlusAmqp\\": "src/"
