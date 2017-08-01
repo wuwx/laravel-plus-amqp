@@ -2,26 +2,32 @@
 
 return [
     'defaults' => [
-        'connection' => env('AMQP_CONNECTION', 'rabbitmq'),
-        'exchange' => env('AMQP_EXCHANGE', 'amq.direct'),
-        'queue' => env('AMQP_EXCHANGE', 'amq.direct'),
+        'connection' => 'default',
+        'exchange' => 'default',
+        'queue' => 'default',
     ],
 
     'connections' => [
-        'rabbitmq' => [
+        'default' => [
             'host' => env('AMQP_HOST', 'localhost'),
         ],
     ],
 
     'exchanges' => [
-        'amq.direct' => [
-            'name' => 'amq.direct',
-            'type' => 'direct',
+        'default' => [
+            'connection' => 'default',
+            'name'       => 'exchange_name',
+            'type'       => 'topic',
         ],
     ],
 
     'queues' => [
-        
+        'default' => [
+            'connection' => 'default',
+            'bindings' => [
+                ['exchange_name', 'routing_key'],
+            ],
+        ],
     ],
 
 ];

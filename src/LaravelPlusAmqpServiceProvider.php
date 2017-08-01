@@ -21,7 +21,7 @@ class LaravelPlusAmqpServiceProvider extends ServiceProvider
         );
 
         $this->app->singleton('amqp', function ($app) {
-            return new AmqpManager();
+            return new AmqpManager(config('amqp'));
         });
     }
 
