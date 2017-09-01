@@ -17,5 +17,12 @@
         "psr-4": {
             "Wuwx\\LaravelPlusAmqp\\": "src/"
         }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Wuwx\\LaravelPlusAmqp\\LaravelPlusAmqpServiceProvider"
+            ]
+        }
     }
 }
