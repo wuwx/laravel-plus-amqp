@@ -18,6 +18,7 @@ return [
             'connection' => 'default',
             'name'       => 'exchange_name',
             'type'       => 'topic',
+            'flags'      => AMQP_DURABLE,
         ],
     ],
 

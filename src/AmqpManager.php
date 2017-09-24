@@ -18,7 +18,7 @@ class AmqpManager
     {
         $this->_config = $config;
     }
-    
+
     public function connection($name = '')
     {
         $name = $name ?: array_get($this->_config, 'defaults.connection');
@@ -39,6 +39,7 @@ class AmqpManager
             $exchange = new AMQPExchange($channel);
             $exchange->setName(array_get($this->_config, "exchanges.$name.name"));
             $exchange->setType(array_get($this->_config, "exchanges.$name.type"));
+            $exchange->setFlags(array_get($this->_config, "exchanges.$name.flags"));
             $exchange->declareExchange();
             $this->_exchanges[$name] = $exchange;
         }
