@@ -29,5 +29,8 @@
                 "Wuwx\\LaravelPlusAmqp\\LaravelPlusAmqpServiceProvider"
             ]
         }
-    }
+    },
+    ,
+    "minimum-stability": "dev",
+    "prefer-stable": true
 }
