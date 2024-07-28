@@ -8,6 +8,9 @@
             "email": "wuweixin@gmail.com"
         }
     ],
+    "config": {
+        "allow-plugins": false
+    },
     "require": {
         "illuminate/support": "~5.1|^6.0|^7.0|^8.0|^9.0|^10.0|^11.0"
     },
@@ -23,6 +26,11 @@
             "Wuwx\\LaravelPlusAmqp\\": "src/"
         }
     },
+    "autoload-dev": {
+        "psr-4": {
+            "Wuwx\\LaravelPlusAmqp\\Test\\": "tests"
+        }
+    },
     "extra": {
         "laravel": {
             "providers": [
@@ -30,7 +38,6 @@
             ]
         }
     },
-    ,
     "minimum-stability": "dev",
     "prefer-stable": true
 }
